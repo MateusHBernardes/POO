@@ -1,7 +1,8 @@
-
 import javax.swing.JOptionPane;
 
 public class Calculadora3 {
+
+    private static Operacoes oper = new Operacoes();
 
     public static void main(String[] args) {
 
@@ -9,96 +10,75 @@ public class Calculadora3 {
         double resultado = 0;
 
         do {
-            double num1 = Calculadora3.solicitaNumero("1°");
-            double num2 = Calculadora3.solicitaNumero("2°");
-            int operacao = Calculadora3.solicitaOperacao();
+            double num1 = solicitaNumero("1°");
+            double num2 = solicitaNumero("2°");
+            int operacao = solicitaOperacao();
 
             switch (operacao) {
                 case 1:
-                    resultado = calculaSoma(num1, num2);
+                    resultado = oper.calculaSoma(num1, num2);
                     break;
                 case 2:
-                    resultado = calculaSubtracao(num1, num2);
+                    resultado = oper.calculaSubtracao(num1, num2);
                     break;
                 case 3:
-                    resultado = calculaMultiplicacao(num1, num2);
+                    resultado = oper.calculaMultiplicacao(num1, num2);
                     break;
                 case 4:
                     while (num2 == 0) {
-                        num2 = Calculadora3.solicitaNumero("2°");
+                        num2 = solicitaNumero("2° (não pode ser zero para divisão)");
                     }
-                    resultado = calculaDivisao(num1, num2);
+                    resultado = oper.calculaDivisao(num1, num2);
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Operação inválida! A calculadora será  encerrada.");
+                    JOptionPane.showMessageDialog(null, "Operação inválida! A calculadora será encerrada.");
                     System.exit(0);
             }
 
-            Calculadora3.mostraResultado(resultado, operacao);
+            mostraResultado(resultado, operacao);
             continuar = Integer.parseInt(JOptionPane.showInputDialog("Deseja continuar calculando? 1 - Sim | 2 - Não"));
 
         } while (continuar == 1);
     }
 
-    public static int solicitaOperacao() {
+    public static class Operacoes {
+        public double calculaSoma(double num1, double num2) {
+            return num1 + num2;
+        }
 
-        int operacao = Integer.parseInt(JOptionPane.showInputDialog("Escolha a operação desejada: \n"
+        public double calculaSubtracao(double num1, double num2) {
+            return num1 - num2;
+        }
+
+        public double calculaMultiplicacao(double num1, double num2) {
+            return num1 * num2;
+        }
+
+        public double calculaDivisao(double num1, double num2) {
+            return num1 / num2;
+        }
+    }
+
+    public static int solicitaOperacao() {
+        return Integer.parseInt(JOptionPane.showInputDialog("Escolha a operação desejada: \n"
                 + "1 - Soma\n"
                 + "2 - Subtração\n"
                 + "3 - Multiplicação\n"
                 + "4 - Divisão"));
-        return operacao;
     }
 
     public static double solicitaNumero(String ordem) {
-        double num = Double.parseDouble(JOptionPane.showInputDialog("Informe o " + ordem + " número"));
-        return num;
+        return Double.parseDouble(JOptionPane.showInputDialog("Informe o " + ordem + " número"));
     }
 
     public static void mostraResultado(double resultado, int operacao) {
-        String op = "";
-
-        if (operacao == 1) {
-            op = "Soma";
-        } else if (operacao == 2) {
-            op = "Subtração";
-        } else if (operacao == 3) {
-            op = "Multiplicação";
-        } else if (operacao == 4) {
-            op = "Divisão";
-        }
+        String op = switch (operacao) {
+            case 1 -> "Soma";
+            case 2 -> "Subtração";
+            case 3 -> "Multiplicação";
+            case 4 -> "Divisão";
+            default -> "Operação Desconhecida";
+        };
         JOptionPane.showMessageDialog(null, "O resultado da " + op + " é: " + resultado);
-
-    }
-    static int solicitarOperacao() {
-
-        int operacao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das opções desejadas: \n 1 - Soma\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão"));
-        return operacao;
-    }
-
-    static double solicitarNumero(String ordem) {
-
-        double num = Double.parseDouble(JOptionPane.showInputDialog("Informe o " + ordem + " número"));
-        return num;
-    }
-
-    static double calculaSoma(double num1, double num2) {
-        double soma = num1 + num2;
-        return soma;
-    }
-
-    static double calculaSubtracao(double num1, double num2) {
-        double sub = num1 - num2;
-        return sub;
-    }
-
-    static double calculaMultiplicacao(double num1, double num2) {
-        double mult = num1 * num2;
-        return mult;
-    }
-
-    static double calculaDivisao(double num1, double num2) {
-        double div = num1 / num2;
-        return div;
     }
 }
