@@ -13,16 +13,22 @@ public class Principal {
             switch(operacao) {
                 case 1:
                 Soma soma = new Soma();
+                soma.setNum1(num1);
+                soma.setNum2(num2);
                 resultado = soma.calculaSoma();
                 break;
 
                 case 2:
                 Subtracao sub = new Subtracao();
+                sub.setNum1(num1);
+                sub.setNum2(num2);
                 resultado = sub.calculaSubtracao();
                 break;
 
                 case 3:
                 Multiplicacao multi = new Multiplicacao();
+                multi.setNum1(num1);
+                multi.setNum2(num2);
                 resultado = multi.calculaMultiplicacao();
                 break;
 
@@ -31,6 +37,8 @@ public class Principal {
                     num2=EntradaSaida.solicitaNumero("2º");
                 }
                 Divisao divi = new Divisao();
+                divi.setNum1(num1);
+                divi.setNum2(num2);
                 resultado = divi.calculaDivisao();
                 break;
             }
