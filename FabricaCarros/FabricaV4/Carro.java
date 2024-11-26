@@ -1,4 +1,4 @@
-public class Carro implements Interface{
+public class Carro {
 
     private int modelo;
     private int cor;

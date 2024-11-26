@@ -1,7 +1,7 @@
 
 import javax.swing.JOptionPane;
 
-public class FabricaV4 implements Interface {
+public class FabricaV4 {
 
     public static void main(String[] args) {
 
