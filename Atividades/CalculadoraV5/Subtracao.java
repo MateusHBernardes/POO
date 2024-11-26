@@ -1,5 +1,3 @@
-package Atividades.CalculadoraV5;
-
 public class Subtracao implements IOperacao {
     
     private double num1;
