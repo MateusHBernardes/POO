@@ -48,27 +48,3 @@ public class Principal {
         } while(continuar==1);
     }
 }
-
-/*          switch(operacao){
-                case 1:
-                resultado = oper.calculaSoma(num1, num2);
-                break;
-
-                case 2:
-                resultado = oper.calculaSubtracao(num1, num2);
-                break;
-
-                case 3:
-                resultado = oper.calculaMultiplicacao(num1, num2);
-                break;
-
-                case 4:
-                while (num2 == 0) {
-                    num2=EntradaSaida.solicitaNumero("2º");
-                }
-                resultado=oper.calculaDivisao(num1, num2);
-                break;
-                default:
-                JOptionPane.showMessageDialog(null, "Operação Inválida");
-                System.exit(0);
-            } */

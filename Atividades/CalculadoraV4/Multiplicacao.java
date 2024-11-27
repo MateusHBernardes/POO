@@ -1,4 +1,4 @@
-public class Subtracao {
+public class Multiplicacao {
     
     private double num1;
     private double num2;
@@ -11,12 +11,16 @@ public class Subtracao {
         this.num1 = num1;
     }
 
-    public void setNum2(double num2) {
-        this.num2=num2;
+    public double setNum2() {
+        return this.num2;
     }
 
-    public double calculaSubtracao() {
-        double subtracao = num1 - num2;
-        return subtracao;
+    public void setNum2(double num2) {
+        this.num2 = num2;
+    }
+
+    public double calculaMultiplicacao() {
+        double multiplicacao = num1 * num2;
+        return multiplicacao;
     }
 }
