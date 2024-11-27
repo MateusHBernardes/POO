@@ -1,21 +1,22 @@
-public class Carro {
 
-    private int modelo;
-    private int cor;
+public abstract class Carro implements ICarro {
 
-    public int getModelo() {
+    private String modelo;
+    private String cor;
+
+    public String getModelo() {
         return this.modelo;
     }
 
-    public void setModelo(int modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    public int getCor() {
+    public String getCor() {
         return this.cor;
     }
 
-    public void setCor(int cor) {
+    public void setCor(String cor) {
         this.cor = cor;
     }
 
