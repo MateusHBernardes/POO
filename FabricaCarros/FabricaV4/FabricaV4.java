@@ -2,7 +2,6 @@ public class FabricaV4 {
 
     public static void main(String[] args) {
 
-        //  SolicitarDados dados = new SolicitarDados();
         String modeloRetoro = EntradaSaida.solicitarModelo();
         String corRetorno = EntradaSaida.solicitarCor();
         CarroOficial car = new CarroOficial();
