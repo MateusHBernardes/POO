@@ -21,10 +21,7 @@ public class EntradaSaida {
     }
 
     public static void exibirDetalhes(String modelo, String cor, int ano, double potencia) {
-        String mensagem = String.format(
-            "Modelo: %s\nCor: %s\nAno de Fabricação: %d\nPotência do Motor: %.2f CV",
-            modelo, cor, ano, potencia
-        );
-        JOptionPane.showMessageDialog(null, mensagem);
+        
+        JOptionPane.showMessageDialog(null, "Modelo: " + modelo + "\n Cor: " + cor + "\n Ano de Fabricação: " + ano + "\n Potência do Motor: " + potencia + " CV");
     }
 }

@@ -1,4 +1,6 @@
+
 public class CarroEsportivo extends CarroBase {
+
     private double velocidadeMaxima;
     private boolean modoEsportivo;
 
@@ -14,6 +16,14 @@ public class CarroEsportivo extends CarroBase {
         return modoEsportivo;
     }
 
+    public void setModelo() {
+
+    }
+
+    public void setCor() {
+
+    }
+
     public void ativarModoEsportivo() {
         this.modoEsportivo = true;
         System.out.println("Modo esportivo ativado!");
@@ -24,7 +34,7 @@ public class CarroEsportivo extends CarroBase {
         System.out.println("Modo esportivo desativado!");
     }
 
-    @Override
+    //@Override
     public void exibirDetalhes() {
         System.out.println("Ano de Fabricação: " + getAnoFabricacao());
         System.out.println("Potência do Motor: " + getPotenciaMotor() + " CV");

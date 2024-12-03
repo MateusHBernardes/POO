@@ -1,4 +1,8 @@
+
+import javax.swing.JOptionPane;
+
 public class Carro extends CarroBase {
+
     private String modelo;
     private String cor;
 
@@ -18,11 +22,11 @@ public class Carro extends CarroBase {
         this.cor = cor;
     }
 
-    @Override
+    //@Override
     public void exibirDetalhes() {
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Cor: " + cor);
-        System.out.println("Ano de Fabricação: " + getAnoFabricacao());
-        System.out.println("Potência do Motor: " + getPotenciaMotor() + " CV");
+        JOptionPane.showMessageDialog(null, "Modelo: " + modelo);
+        JOptionPane.showMessageDialog(null, "Cor: " + cor);
+        JOptionPane.showMessageDialog(null, "Ano de Fabricação: " + getAnoFabricacao());
+        JOptionPane.showMessageDialog(null, "Potência do Motor: " + getPotenciaMotor() + " CV");
     }
 }
