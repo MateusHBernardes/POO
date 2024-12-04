@@ -1,6 +1,9 @@
 package controle;
 
+
 import javax.swing.JOptionPane;
+import modelo.*;
+import visualizacao.EntradaSaida;
 
 public class Controladora {
     

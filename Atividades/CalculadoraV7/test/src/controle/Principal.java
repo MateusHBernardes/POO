@@ -1,9 +1,15 @@
 
-import javax.swing.JOptionPane;
+package controle;
 
 public class Principal {
 
     public static void main(String[] args) {
+        
+        Controladora controladora = new Controladora();
+        controladora.exibeMenu();
+    }
+
+/*    public static void main(String[] args) {
 
         int continuar;
         double resultado=0;
@@ -46,5 +52,6 @@ public class Principal {
             EntradaSaida.mostraResultado(resultado, operacao);
             continuar=Integer.parseInt(JOptionPane.showInputDialog("Deseja continuar calculando? 1 - Sim | 2 - Não"));
         } while(continuar==1);
-    }
+
+    } */
 }
