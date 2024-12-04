@@ -13,8 +13,8 @@ public class Controladora {
         Operacoes oper = null;
         do {
         
-            double num1 = EntradaSaida.solicitaNumero("1º")
-            double num2 = EntradaSaida.solicitaNumero("2º")
+            double num1 = EntradaSaida.solicitaNumero("1º");
+            double num2 = EntradaSaida.solicitaNumero("2º");
             int operacao = EntradaSaida.solicitaOperacao();
 
             switch (operacao) {
