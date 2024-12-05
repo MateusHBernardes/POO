@@ -1,14 +1,14 @@
 package controle;
 import modelo.*;
 import visualizacao.EntradaSaida;
-import javax.swing.JOptionPane;
 
 public class Controladora {
-    
-    public static void main(String[] args) {
         // Solicitando dados do usuário
 
         // Criando o carro e configurando os atributos
+        
+
+    public void exibeMenu() {
         Carro carro = new Carro();
 
         String modelo = EntradaSaida.solicitarModelo();
@@ -46,10 +46,5 @@ public class Controladora {
         System.out.println(esportivo.getAnoFabricacao());
         System.out.println(esportivo.getPotenciaMotor());
 
-    }
-
-    public void exibeMenu() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exibeMenu'");
     }
 }

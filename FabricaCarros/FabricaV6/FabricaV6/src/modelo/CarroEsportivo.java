@@ -18,14 +18,6 @@ public class CarroEsportivo extends CarroBase {
         return modoEsportivo;
     }
 
-    public void setModelo() {
-
-    }
-
-    public void setCor() {
-
-    }
-
     public void ativarModoEsportivo() {
         this.modoEsportivo = true;
         System.out.println("Modo esportivo ativado!");
@@ -42,5 +34,17 @@ public class CarroEsportivo extends CarroBase {
         System.out.println("Potência do Motor: " + getPotenciaMotor() + " CV");
         System.out.println("Velocidade Máxima: " + velocidadeMaxima + " km/h");
         System.out.println("Modo Esportivo: " + (modoEsportivo ? "Ativado" : "Desativado"));
+    }
+
+    @Override
+    public void setCor() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCor'");
+    }
+
+    @Override
+    public void setModelo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModelo'");
     }
 }

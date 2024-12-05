@@ -1,4 +1,6 @@
-package controle;
+
+
+import controle.Controladora;
 
 public class FabricaDeCarros {
 
