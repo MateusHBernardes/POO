@@ -1,3 +1,5 @@
+
+package modelo2;
 public class Soma extends Operacoes{
 
     public double calcula() {

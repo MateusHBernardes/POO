@@ -1,3 +1,5 @@
+
+package modelo2;
 public class Multiplicacao extends  Operacoes {
 
     public double calcula() {

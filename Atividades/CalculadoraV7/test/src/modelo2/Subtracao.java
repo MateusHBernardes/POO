@@ -1,3 +1,6 @@
+
+package modelo2;
+
 public class Subtracao extends Operacoes {
 
     public double calcula() {

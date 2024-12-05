@@ -1,3 +1,5 @@
+
+package modelo2;
 public abstract class Operacoes implements IOperacao{
     
     protected double num1;

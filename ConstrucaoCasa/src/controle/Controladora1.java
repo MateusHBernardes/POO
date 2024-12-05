@@ -1,9 +1,9 @@
 package controle;
 import javax.swing.JOptionPane;
+import modelo.Casa;
 import visualizacao.EntradaSaida;
-import modelo.*;
 
-public class Controladora {
+public class Controladora1 {
     private Casa casa = null;
 
     public void exibeMenu() {

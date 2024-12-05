@@ -1,3 +1,6 @@
+
+package visualizacao;
+
 import javax.swing.JOptionPane;
 
 public class EntradaSaida {

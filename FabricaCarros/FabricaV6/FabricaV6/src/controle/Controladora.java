@@ -1,5 +1,6 @@
 package controle;
-import modelo.*;
+import modelo.Carro;
+import modelo.CarroEsportivo;
 import visualizacao.EntradaSaida;
 
 public class Controladora {

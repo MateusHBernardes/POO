@@ -1,3 +1,5 @@
+
+package modelo2;
 public class Divisao extends Operacoes {
 
     public double calcula() {

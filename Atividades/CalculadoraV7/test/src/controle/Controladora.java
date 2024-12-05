@@ -2,7 +2,7 @@ package controle;
 
 
 import javax.swing.JOptionPane;
-import modelo.*;
+import modelo2.*;
 import visualizacao.EntradaSaida;
 
 public class Controladora {
@@ -43,7 +43,7 @@ public class Controladora {
             oper.setNum2(num2);
             resultado = oper.calcula();
             EntradaSaida.mostraResultado(resultado, operacao);
-            continuar=Integer.parseInt(JOptionPane.showInputDialog("Des"));
+            continuar=Integer.parseInt(JOptionPane.showInputDialog("Continuar = 1"));
         } while (continuar == 1);
     }
 }
