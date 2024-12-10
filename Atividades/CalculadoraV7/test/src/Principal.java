@@ -1,5 +1,3 @@
-
-
 import controle.Controladora;
 
 public class Principal {
